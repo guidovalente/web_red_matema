@@ -1,0 +1,12 @@
+.section, .inner-section {
+  text-align: center;
+}
+
+.bg-guido {
+  background: url('guido.jpeg');
+  background-size: cover;
+}
+
+.face {
+  height: 150px;
+}
