@@ -34,23 +34,23 @@ nav {
 
 body
 {
-
-}
-
-#section-1 {
   background-image: url('lines.png');
 }
 
+#section-1 {
+  /* background-image: url('lines.png'); */
+}
+
 #section-2 {
-  background-color: #4fb2e8;
+  background-color: rgba(47, 186, 145, 0.8);
 }
 
 #section-3 {
-  background-image: url('la_plata.png');
+  /* background-image: url('lines.png'); */
 }
 
 #section-4 {
-  background-color: #2fba91;
+  background-color: rgba(47, 186, 145, 0.8);
 }
 
 .title-text {
