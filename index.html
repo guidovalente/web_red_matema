@@ -12,6 +12,7 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/floating-labels.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="static/style.css">
@@ -19,52 +20,118 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand" href="#">Psicólogxs Online!</a>
+    <!-- <a class="navbar-brand" href="#">Matema Psi</a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto ml-auto" id="navMenu">
+      <ul class="navbar-nav mr-auto ml-auto h4" id="navMenu">
         <li data-menuanchor="inicio" class="nav-item">
-          <a class="nav-link" href="#inicio">Inicio</a>
+          <a class="nav-link" href="#inicio">INICIO</a>
         </li>
         <li data-menuanchor="mision" class="nav-item">
-          <a class="nav-link" href="#mision">Misión</a>
+          <a class="nav-link" href="#mision">NOSOTROS</a>
         </li>
         <li data-menuanchor="nosotrxs" class="nav-item">
-          <a class="nav-link" href="#nosotrxs">Nosotrxs</a>
+          <a class="nav-link" href="#nosotrxs">SERVICIOS</a>
         </li>
         <li data-menuanchor="contacto" class="nav-item">
-          <a class="nav-link" href="#contacto">Contactanos</a>
+          <a class="nav-link" href="#contacto">CONTACTANOS</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div id="fullpage">
-    <div class="section">
-      <div class="bg-ph"></div>
-      <h1 class="display-4 title-text">
-        Psicólogxs Online!
-      </h1>
-    </div>
-    <div class="section">
-      Por qué lo hacemos
-    </div>
-    <div class="section">
-      <div class="slide">
-        <img src="static/victoria.jpeg" class="face rounded-circle">
-        <br><br>
-        <h2 >Victoria</h2>
+    <div class="section" id="section-1">
+      <div class="jumbotron">
+        <h1 class="display-1">matema psi</h1>
+        <!-- <hr class="my-4"> -->
+        <p>Profesionales de la Salud Mental</p>
+        <a href="#contacto" class="btn btn-dark btn-lg" role="button">Contactanos</a>
       </div>
-      <div class="slide">
-        Guido
-      </div>
-      <h1 class="display-3 pt-3 nosotros">Nosotros</h1>
     </div>
-    <div class="section">
-      asd
+    <div class="section px-4" id="section-2">
+      <div class="row">
+        <div class="col m-auto">
+          <div class="text-white mx-4 h4">
+            Somos un equipo de jóvenes profesionales, psicólogos y psicólogas con orientación clínica egresados de la Universidad Nacional de La Plata, con recorrido en el ámbito público institucional y hospitalario.
+          </div>
+        </div>
+        <div class="col m-auto">
+          <img class="img-fluid" src="static/la_plata.png" alt="">
+        </div>
+      </div>
+
+    </div>
+    <div class="section px-5" id="section-3">
+      <div class="card-deck mx-5">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section px-2" id="section-4">
+      <div class="container mt-4">
+        <div class="row justify-content-md-center h4 pb-5">
+          Si querés coordinar una entrevista o hacernos alguna consulta, podés escribirnos.
+        </div>
+        <div class="row justify-content-md-center align-items-center">
+          <div class="col-lg mb-5 mb-lg-0">
+            <div class="h3">
+              matemapsi@gmail.com
+            </div>
+            <div class="pt-3">
+              <div class="row justify-content-md-left align-items-center">
+                <div class="col text-center">
+                  <img src="static/whatsapp.png" class="wa-button" alt="">
+                </div>
+                <div class="col h2 text-left">
+                  2212432455
+                </div>
+              </div>
+
+            </div>
+            <br>
+          </div>
+          <div class="col-lg">
+            <form class="text-left">
+              <div class="h2 mb-3">Contacto</div>
+              <div class="form-label-group">
+                <input type="email" id="correo" class="form-control" placeholder="Correo" required autofocus>
+                <label for="inputEmail">Correo</label>
+              </div>
+              <div class="form-label-group">
+                <input type="text" id="nombre" class="form-control" placeholder="Nombre" required>
+                <label for="formGroupExampleInput">Nombre</label>
+              </div>
+              <button type="submit" class="btn btn-lg btn-light">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -75,7 +142,8 @@
     autoScrolling:true,
     showActiveTooltip: true,
     navigation: true,
-    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke'],
+    scrollbar: false,
+    controlArrows: true,
     anchors: ['inicio', 'mision', 'nosotrxs', 'contacto'],
     menu: '#navMenu',
     recordHistory: false,
