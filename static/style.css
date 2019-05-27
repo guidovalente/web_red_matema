@@ -1,13 +1,17 @@
+@font-face {
+  font-family: Enso;
+  src: url("enso.ttf") format("truetype")
+}
+
 * {
   font-family: arial;
 }
 
 .jumbotron {
-  background-color: rgba(130, 130, 130, 0.49);
+  background-color: rgba(150, 150, 150, 0.49);
 }
 
 nav {
-  /* background: rgba(200, 200, 200, .9); */
   background-color: transparent;
   margin-top: 1%;
 }
@@ -28,6 +32,10 @@ nav {
   font-weight: bold;
 }
 
+.title-text {
+  font-size: 3.5rem;
+}
+
 .slide {
   font-size: 3em;
 }
@@ -37,24 +45,8 @@ body
   background-image: url('lines.png');
 }
 
-#section-1 {
-  /* background-image: url('lines.png'); */
-}
-
-#section-2 {
+#section-2, #section-4 {
   background-color: rgba(47, 186, 145, 0.8);
-}
-
-#section-3 {
-  /* background-image: url('lines.png'); */
-}
-
-#section-4 {
-  background-color: rgba(47, 186, 145, 0.8);
-}
-
-.title-text {
-  font-size: 3.5rem;
 }
 
 @media (min-width: 576px) {
