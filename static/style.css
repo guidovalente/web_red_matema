@@ -37,6 +37,11 @@ nav {
   font-size: 3.5em;
 }
 
+.desc-text{
+  font-size: 1.5rem;
+  text-align: left;
+}
+
 .psi {
   color: rgb(47, 186, 145);
 }
@@ -58,12 +63,19 @@ body
   .title-text {
     font-size: 5em;
   }
+  .desc-text{
+    font-size: 1.6rem;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {
   .title-text {
     font-size: 7em;
     margin-bottom: -20px;
+  }
+  .desc-text{
+    font-size: 1.8rem;
   }
 }
 
