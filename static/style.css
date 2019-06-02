@@ -16,8 +16,12 @@ nav {
   margin-top: 1%;
 }
 
-.wa-button {
+.contact-button {
   max-height: 50px;
+}
+
+h3.contact-text {
+  font-size: 1.3rem;
 }
 
 .section {
@@ -35,6 +39,7 @@ nav {
 .title-text {
   font-family: Enso;
   font-size: 3.5em;
+  margin-bottom: -15px;
 }
 
 .desc-text{
@@ -62,20 +67,27 @@ body
 @media (min-width: 576px) {
   .title-text {
     font-size: 5em;
+
   }
   .desc-text{
     font-size: 1.6rem;
     text-align: center;
+  }
+  h3.contact-text {
+    font-size: 1.6rem;
   }
 }
 
 @media (min-width: 768px) {
   .title-text {
     font-size: 7em;
-    margin-bottom: -20px;
+    margin-bottom: -30px;
   }
   .desc-text{
     font-size: 1.8rem;
+  }
+  h3.contact-text {
+    font-size: 1.6rem;
   }
 }
 
