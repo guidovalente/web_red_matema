@@ -64,7 +64,17 @@ body
   background-color: rgba(47, 186, 145, 0.8);
 }
 
+.navbar-nav {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+}
+
 @media (min-width: 576px) {
+  .navbar-nav {
+    background: none;
+    padding: none;
+  }
   .title-text {
     font-size: 5em;
 
