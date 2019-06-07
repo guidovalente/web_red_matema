@@ -3,6 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="57x57" href="static/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="static/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="static/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="static/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="static/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="static/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="static/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="static/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="static/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="static/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/icons/favicon-16x16.png">
+  <link rel="manifest" href="static/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="static/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
 
   <title>Red Matema Psi</title>
 
@@ -104,20 +122,25 @@
           <div class="col-lg-3 mb-5 mb-md-0 text-nowrap mx-auto">
             <div class="row pb-4">
               <div class="col-auto col-lg-8 mx-auto text-left">
-                <span class="d-inline-block"><img src="static/mail.png" class="contact-button"></span>
-                <span class="d-inline-block pl-2"><h3 class="contact-text">contacto@matema.red</h3></span>
+                <a class="contact-link" href="mailto:contacto@matema.red?Subject=Consulta" target="_top">
+                  <span class="d-inline-block"><img src="static/mail.png" class="contact-button"></span>
+                  <span class="d-inline-block pl-2"><h3 class="contact-text">contacto@matema.red</h3></span>
+                </a>
               </div>
             </div>
             <div class="row mb-md-5">
               <div class="col-auto col-lg-8 mx-auto text-left">
-                <span class="d-inline-block"><img src="static/whatsapp.png" class="contact-button"></span>
-                <span class="d-inline-block pl-2"><h3 class="contact-text pl-lg-2 pl-xl-0">(221) 623-1492</h3></span>
+                <a class="contact-link" href="https://wa.me/542213144044">
+                  <span class="d-inline-block"><img src="static/whatsapp.png" class="contact-button"></span>
+                  <span class="d-inline-block pl-2"><h3 class="contact-text pl-lg-2 pl-xl-0">(221) 314-4044</h3></span>
+                </a>
               </div>
             </div>
           </div>
           <div class="col-lg-2 col-xl-1"></div>
           <div class="col-md-9 col-lg-6 col-xl-5 mx-5 mx-md-auto mx-lg-0 mb-5">
-            <form class="text-left">
+            <form id="contact-form" class="text-left">
+              <div id="resultado-contacto" style="display: none;"></div>
               <div class="h2 mb-3">Contacto</div>
               <div class="form-label-group">
                 <input type="email" id="correo" class="form-control" placeholder="Correo" required autofocus>
@@ -132,7 +155,7 @@
                 <textarea type="text" class="form-control" id="mensaje" rows="3" required></textarea>
               </div>
               <div class="g-recaptcha" data-callback="recaptcha_callback" data-sitekey="6Lco-aYUAAAAAJZ183RttIaCF00fIwIlPfnBTw2K"></div>
-              <button type="submit" disabled class="btn btn-lg btn-light submit-button">Enviar</button>
+              <button type="button" onClick="submitToAPI(event)" disabled class="btn btn-lg btn-light submit-button">Enviar</button>
             </form>
           </div>
           <div class="col-lg-1"></div>
@@ -141,13 +164,13 @@
     </div>
   </div>
   <script src="https://www.google.com/recaptcha/api.js?render=6Lco-aYUAAAAAJZ183RttIaCF00fIwIlPfnBTw2K"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript">
   grecaptcha.ready(function() {
     grecaptcha.execute('6Lco-aYUAAAAAJZ183RttIaCF00fIwIlPfnBTw2K', {action: 'homepage'}).then(function(token) {
-      $(':input[type="submit"]').prop('disabled', false);
+      $(':input[type="button"]').prop('disabled', false);
     });
   });
   </script>
@@ -168,6 +191,58 @@
     responsiveWidth: 992
   });
   fullpage_api.setAllowScrolling(true);
+  </script>
+  <script type="text/javascript">
+  function submitToAPI(e) {
+    e.preventDefault();
+
+    var Namere = /[A-Za-z]{1}[A-Za-z]/;
+    if (!Namere.test($("#nombre").val())) {
+      alert ("Ingrese un nombre válido.");
+      return;
+    }
+    if ($("#correo").val()=="") {
+      alert ("Por favor ingrese su correo.");
+      return;
+    }
+
+    var reemail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+    if (!reemail.test($("#correo").val())) {
+      alert ("Debe ingresar una dirección de correo válida.");
+      return;
+    }
+
+    var nombre = $("#nombre").val();
+    var correo = $("#correo").val();
+    var mensaje = $("#mensaje").val();
+    var data = {
+      nombre : nombre,
+      correo : correo,
+      mensaje : mensaje
+    };
+
+    var divAlert = document.getElementById("resultado-contacto");
+    divAlert.style.display = "inherit";
+
+    $.ajax({
+      type: "POST",
+      url : "https://w6giiic5q6.execute-api.us-east-1.amazonaws.com/01/contacto",
+      dataType: "json",
+      crossDomain: "true",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(data),
+      success: function () {
+        // clear form and show a success message
+        divAlert.innerHTML = "Hemos recibido su mensaje. Nos pondremos en contacto a la brevedad."
+        divAlert.className = "alert alert-success";
+        document.getElementById("contact-form").reset();
+      },
+      error: function () {
+        divAlert.innerHTML = "Corrija los datos e intente nuevamente."
+        divAlert.className = "alert alert-danger";
+      }
+    });
+  }
   </script>
 </body>
 </html>
